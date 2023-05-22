@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body, .car {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .wheels {
+            display: flex;
+            width: 53rem;
+            justify-content: space-between;
+            margin-top: -66vh;
+            margin-left: -2rem;
+        }
+
+        .wheels img {
+            animation:spin 4s linear infinite;
+        }
+
+        .car {
+            animation: drive 4s alternate infinite;
+        }
+
+        @keyframes spin { 
+            100% {  
+                transform:rotate(360deg); 
+            } 
+        }
+
+        @keyframes drive { 
+            0% { 
+                transform: translateX(-75px); 
+            } 
+            50% {
+                transform: translateX(0px); 
+            }
+            100% {
+                transform: translateX(1500px) rotate(-15deg);
+            }
+        }
+
+        .car
+    </style>
+</head>
+<body>
+
+<div class="car">
+    <div class="body">
+        <img src="car.png" alt="Car">
+    </div>
+    <div class="wheels">
+        <img src="wheel.png">
+        <img src="wheel.png">
+    </div>
+</div>
+
+</body>
+</html>
+
